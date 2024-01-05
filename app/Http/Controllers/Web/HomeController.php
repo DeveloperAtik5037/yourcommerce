@@ -36,9 +36,16 @@ class HomeController extends Controller
     {
     }
 
+    public function delete_session()
+    {
+         session()->flush();
+         return redirect()->route('home');
+        // return session()->all();
+    }
 
     public function index()
     {
+
         $theme_name = theme_root_path();
 
         return match ($theme_name) {

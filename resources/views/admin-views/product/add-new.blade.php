@@ -33,6 +33,8 @@
                             @php($default_lang = 'en')
 
                             @php($default_lang = json_decode($language)[0])
+                            
+
                             <ul class="nav nav-tabs w-fit-content mb-4">
                                 @foreach (json_decode($language) as $lang)
                                     <li class="nav-item">

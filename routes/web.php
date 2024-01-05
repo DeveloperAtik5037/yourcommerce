@@ -22,6 +22,7 @@ Route::get('maintenance-mode', 'Web\WebController@maintenance_mode')->name('main
 
 
 Route::group(['namespace' => 'Web','middleware'=>['maintenance_mode']], function () {
+    Route::get('delete_session', 'HomeController@delete_session');
     Route::get('/', 'HomeController@index')->name('home');
 
     Route::get('quick-view', 'WebController@quick_view')->name('quick-view');
