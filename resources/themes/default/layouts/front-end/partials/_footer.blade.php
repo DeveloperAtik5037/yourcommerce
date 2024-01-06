@@ -78,16 +78,16 @@
                                 alt="{{ $web_config['name']->value }}"/>
                         </a>
 
-                        @if($web_config['ios']['status'] || $web_config['android']['status'])
+                        {{-- @if($web_config['ios']['status'] || $web_config['android']['status'])
                             <div class="mt-4 pt-lg-4">
                                 <h6 class="text-uppercase font-weight-bold footer-heder align-items-center">
                                     {{\App\CPU\translate('download_our_app')}}
                                 </h6>
                             </div>
-                        @endif
+                        @endif --}}
 
 
-                        <div class="store-contents d-flex justify-content-center pr-lg-4" >
+                        {{-- <div class="store-contents d-flex justify-content-center pr-lg-4" >
                             @if($web_config['ios']['status'])
                                 <div class="{{Session::get('direction') === "rtl" ? 'ml-2' : 'mr-2'}} mb-2">
                                     <a class="" href="{{ $web_config['ios']['link'] }}" role="button">
@@ -104,7 +104,7 @@
                                     </a>
                                 </div>
                             @endif
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-md-9" >
                         <div class="row">

@@ -43,7 +43,7 @@
                         <p>{{ \App\CPU\Helpers::get_business_settings('shop_address')}}</p>
                         <a href="mailto:{{$web_config['email']->value}}">{{$web_config['email']->value}}</a>
 
-                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap mt-4">
+                        {{-- <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap mt-4">
                             @if($web_config['android']['status'])
                                 <a href="{{ $web_config['android']['link'] }}"><img src="{{ theme_asset('assets/img/media/google-play.png') }}" loading="lazy" alt=""></a>
                             @endif
@@ -51,7 +51,7 @@
                                 <a href="{{ $web_config['ios']['link'] }}"><img src="{{ theme_asset('assets/img/media/app-store.png') }}" loading="lazy" alt=""></a>
                             @endif
 
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-8">
