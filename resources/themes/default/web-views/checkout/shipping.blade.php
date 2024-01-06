@@ -449,8 +449,7 @@
             }
         }
     </script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key={{\App\CPU\Helpers::get_business_settings('map_api_key')}}&libraries=places&v=3.49"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{\App\CPU\Helpers::get_business_settings('map_api_key')}}&libraries=places&v=3.52"></script>
     <script>
         function initAutocomplete() {
             var myLatLng = {

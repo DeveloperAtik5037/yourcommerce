@@ -33,7 +33,7 @@
                             @php($default_lang = 'en')
 
                             @php($default_lang = json_decode($language)[0])
-                            
+
 
                             <ul class="nav nav-tabs w-fit-content mb-4">
                                 @foreach (json_decode($language) as $lang)
@@ -63,7 +63,7 @@
                                         <label class="title-color"
                                                for="{{ $lang }}_description">{{ \App\CPU\translate('description') }}
                                             ({{ strtoupper($lang) }})</label>
-                                        <textarea name="description[]" class="textarea editor-textarea">{{ old('details') }}</textarea>
+                                        <textarea name="description[]" class="textarea editor-textarea" id="editor">{{ old('details') }}</textarea>
                                     </div>
                                 </div>
                             @endforeach
@@ -749,9 +749,9 @@
                 reverseButtons: true
             }).then((result) => {
                 if (result.value) {
-                    for (instance in CKEDITOR.instances) {
-                        CKEDITOR.instances[instance].updateElement();
-                    }
+                    // for (instance in CKEDITOR.instances) {
+                    //     CKEDITOR.instances[instance].updateElement();
+                    // }
                     var formData = new FormData(document.getElementById('product_form'));
                     $.ajaxSetup({
                         headers: {
@@ -849,13 +849,24 @@
     </script>
 
     {{-- ck editor --}}
-    <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/ckeditor.js"></script>
-    <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/adapters/jquery.js"></script>
+    {{-- <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/adapters/jquery.js"></script> --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
     <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
+    {{-- <script>
         $('.textarea').ckeditor({
             contentsLangDirection: '{{ Session::get('direction') }}',
         });
-    </script>
+    </script> --}}
 
     {{-- ck editor --}}
 @endpush
