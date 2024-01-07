@@ -73,7 +73,7 @@
                                     <div class="form-group pt-4">
                                         <label class="title-color">{{ \App\CPU\translate('description')}}
                                             ({{strtoupper($lang)}})</label>
-                                        <textarea name="description[]" class="textarea  editor-textarea" id="editor" required>{!! $translate[$lang]['description']??$product['details'] !!}</textarea>
+                                        <textarea name="description[]" class="textarea  editor-textarea" id="editor" required>{!! $translate[$lang]['description'] ?? $product['details'] !!}</textarea>
                                     </div>
                                 </div>
                             @endforeach
