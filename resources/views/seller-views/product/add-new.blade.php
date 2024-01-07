@@ -60,7 +60,7 @@
                                         <label class="title-color"
                                             for="{{ $lang }}_description">{{ \App\CPU\translate('description') }}
                                             ({{ strtoupper($lang) }})</label>
-                                        <textarea name="description[]" class="editor textarea" cols="30" rows="10" required>{{ old('details') }}</textarea>
+                                        <textarea name="description[]" class="editor textarea" id="editor" cols="30" rows="10" required>{{ old('details') }}</textarea>
                                     </div>
                                 </div>
                             @endforeach
@@ -684,9 +684,9 @@
                 confirmButtonText: 'Yes',
                 reverseButtons: true
             }).then((result) => {
-                for (instance in CKEDITOR.instances) {
-                    CKEDITOR.instances[instance].updateElement();
-                }
+                // for (instance in CKEDITOR.instances) {
+                //     CKEDITOR.instances[instance].updateElement();
+                // }
                 var formData = new FormData(document.getElementById('product_form'));
                 $.ajaxSetup({
                     headers: {
@@ -779,12 +779,23 @@
     </script>
 
     {{-- ck editor --}}
-    <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/ckeditor.js"></script>
+    {{-- <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/ckeditor.js"></script>
     <script src="{{ asset('/') }}vendor/ckeditor/ckeditor/adapters/jquery.js"></script>
     <script>
         $('.textarea').ckeditor({
             contentsLangDirection: '{{ Session::get('direction') }}',
         });
+    </script> --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
     </script>
     {{-- ck editor --}}
 @endpush
