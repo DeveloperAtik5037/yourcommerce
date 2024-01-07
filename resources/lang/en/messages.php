@@ -3660,4 +3660,5 @@
   'All_copy_right_reserved_©_2024_' => 'All copy right reserved © 2024 ',
   'Company Vehicle' => 'Company Vehicle',
   'Shipping_Method_Update' => 'Shipping Method Update',
+  'School Bag' => 'School Bag',
 );
