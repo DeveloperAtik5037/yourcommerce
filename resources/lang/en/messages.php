@@ -3661,4 +3661,5 @@
   'Company Vehicle' => 'Company Vehicle',
   'Shipping_Method_Update' => 'Shipping Method Update',
   'School Bag' => 'School Bag',
+  'please_provide_embed_link_not_direct_link' => 'Please provide embed link not direct link',
 );

@@ -87,7 +87,7 @@
     <script src="{{ asset('public/assets/back-end') }}/js/custom.js"></script>
     <!-- JS Implementing Plugins -->
 
-    @stack('script')
+    {{-- @stack('script') --}}
 
 
     <!-- JS Front -->
