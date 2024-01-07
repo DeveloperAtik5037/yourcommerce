@@ -375,10 +375,10 @@
     @stack('script')
 
     {{-- ck editor --}}
-    <script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
+    {{-- <script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
     <script>
         CKEDITOR.replace('editor');
-    </script>
+    </script> --}}
     {{-- ck editor --}}
 
     <script>
