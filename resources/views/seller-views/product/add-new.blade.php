@@ -61,7 +61,7 @@
                                             for="{{ $lang }}_description">{{ \App\CPU\translate('description') }}
                                             ({{ strtoupper($lang) }})</label>
                                         {{-- <textarea name="description[]" class="editor textarea" id="editor" cols="30" rows="10" required>{{ old('details') }}</textarea> --}}
-                                        <textarea name="description[]" class="textarea editor-textarea" id="editor">{{ old('details') }}</textarea>
+                                        {{-- <textarea name="description[]" class="textarea editor-textarea" id="editor">{{ old('details') }}</textarea> --}}
                                     </div>
                                 </div>
                             @endforeach
